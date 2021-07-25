@@ -1,15 +1,12 @@
 const JWT = require("jsonwebtoken");
-const User = require("../models/user");
+const User = require("../models/users");
 const Token = require("../models/token");
 const bcrypt = require("bcrypt");
 const crypto = require("crypto");
-const signup = require("../controllers/signup")
 const bcryptSalt = process.env.BCRYPT_SALT;
 const clientURL = process.env.CLIENT_URL;
 
-const signup = signup;
-
-const requestPasswordReset = async (email) => {
+exports.requestPasswordReset = async (email) => {
   const user = await User.findOne({ email });
   if (!user) throw new Error("Email does not exist");
 
@@ -39,7 +36,7 @@ const requestPasswordReset = async (email) => {
   return link;
 };
 
-const resetPassword = async (userId, token, password) => {
+exports.resetPassword = async (userId, token, password) => {
   let passwordResetToken = await Token.findOne({ userId });
 
   if (!passwordResetToken) {
@@ -76,8 +73,4 @@ const resetPassword = async (userId, token, password) => {
   return true;
 };
 
-module.exports = {
-  signup,
-  requestPasswordReset,
-  resetPassword,
-};
+
