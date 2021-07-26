@@ -1,9 +1,11 @@
-const JWT = require("jsonwebtoken");
 const User = require("../models/users");
 const Token = require("../models/token");
 const bcrypt = require("bcryptjs");
+const crypto = require("crypto");
+const sendEmail = require("../utils/email/sendEmail");
 const bcryptSalt = process.env.BCRYPT_SALT;
 const clientURL = process.env.CLIENT_URL;
+
 
 exports.requestPasswordReset = async (email) => {
   const user = await User.findOne({ email });

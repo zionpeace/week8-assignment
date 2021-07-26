@@ -5,6 +5,10 @@ async function dbConfig() {
         await mongoose.connect(process.env.MONGO_URL, {
           useNewUrlParser: true,
           useUnifiedTopology: true,
+          autoIndex: true,
+          useCreateIndex: true,
+          useFindAndModify:false,
+
         });
 
         console.log("Database connected")
