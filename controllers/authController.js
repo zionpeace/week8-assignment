@@ -25,7 +25,7 @@ exports.signup = async (req, res, next) => {
   const id = createUser._id
       // sign jwt token with user id as payload
       const token = jwt.sign({ id }, process.env.JWT_SECRET, {
-        expiresIn: process.env.JWT_EXPIRES_IN,
+        expiresIn: `${process.env.JWT_EXPIRES_IN}`,
       });
   
       // push new user to dummy database
