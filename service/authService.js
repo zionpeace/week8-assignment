@@ -1,8 +1,7 @@
 const JWT = require("jsonwebtoken");
 const User = require("../models/users");
 const Token = require("../models/token");
-const bcrypt = require("bcrypt");
-const crypto = require("crypto");
+const bcrypt = require("bcryptjs");
 const bcryptSalt = process.env.BCRYPT_SALT;
 const clientURL = process.env.CLIENT_URL;
 
