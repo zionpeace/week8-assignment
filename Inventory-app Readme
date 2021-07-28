@@ -1,0 +1,4 @@
+we created signup which allows users to signup and requst a new password,if password is forgoten.
+we created an inventory that allows users to the database.
+users can get all items,update a particular items or delete an item.
+items in the database have a name,description,category,price,number-in - stock and url.
