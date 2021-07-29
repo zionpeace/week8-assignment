@@ -1,22 +1,28 @@
-const express = require('express');
-const cors = require('cors');
-const userRoutes = require("./routes/routes");
-const dotenv = require("dotenv");
-const db = require("./config/db")
 
-// configure dotenv for environment variable
-dotenv.config({ path: "./config.env" });
+const dotenv = require("dotenv");
+const express = require("express");
 const app = express();
+const db = require("./config/db");
+const userRoutes = require("./routes/routes");
+const cors = require("cors");
+const port = 8080;
+
+dotenv.config({ path: "./config.env" });
 
 db()
-app.use(cors)
+
+app.use(cors());
 app.use(express.json());
-app.use("/api/v1/user", userRoutes);
-app.use((err,req,res, next) => {
-    res.status(500).json({ err: err.message });
-})
-const port = process.env.PORT;
-app.listen(port, () => {
-  console.log(`Server running on ${port}`);
+
+// API routes
+app.use("/api/v1", userRoutes);
+
+app.use((error, req, res, next) => {
+  res.status(500).json({ error: error.message });
 });
+
+app.listen(port, () => {
+  console.log("Listening to Port ", port);
+});
+
 module.exports = app;
