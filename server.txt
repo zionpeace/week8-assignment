@@ -1,0 +1,1 @@
+mongodb+srv://emenejasher:<password>@cluster0.stsym.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
