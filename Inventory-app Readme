@@ -1,4 +1,55 @@
-we created signup which allows users to signup and requst a new password,if password is forgoten.
-we created an inventory that allows users to the database.
-users can get all items,update a particular items or delete an item.
-items in the database have a name,description,category,price,number-in - stock and url.
+<h1 align="center">  Inventory Management App</h1>
+
+Main Features
+
+ > This is an Inventory Management App that was created to track available products, products information, admin and clients prefered actions, and modifications.
+ > once it's purchased the seller marks it as sold, and then the admin marks it as bought.
+
+ Backend Modules Used
+
+ - Express
+ - Nodemon
+ - Mongoose
+ - Json Web Token (For authentication)
+ - bcryptjs (for data encryption)
+
+Main Concepts
+
+ - CRUD operations
+ - Authentication system
+ - Encrypting passwords
+
+Interface Outline
+***************************************************************************************************
+**To Signup and Login**
+  - Everyone is registered as a user using "/users/signup"
+    Registered User's details is validated to correctness using the auth.js before it is acccepted
+  - Registered user can signin using "/users/login"
+
+**Create, Update, Delete and Get all products**
+  - Create product using "/products/create
+  - Update product by id using "/products/<userid>
+  - Get a Single product using "/products/<userid>
+  - Delete a product using "/products/<userid>
+***************************************************************************************************
+
+Setup/Initialization
+**************************************************
+To run this project, install it locally using npm:
+
+$ cd week 8 assignment
+$ npm install (install dependencies)
+$ npm start (for Node server side development)
+**************************************************
+
+DOTENV
+ - PORT=
+ - DB_URI=
+ - JWT_SECRET=
+
+Contributors
+
+  **Ayomiko A.**
+  **Iyke I.**
+  **Peace E.**
+  **Emmanuel J.**
