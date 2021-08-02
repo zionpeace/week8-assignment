@@ -1,14 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 async function dbConfig() {
-    try {
-        await mongoose.connect(process.env.MONGO_URL, {
-          useNewUrlParser: true,
-          useUnifiedTopology: true,
-          autoIndex: true,
-          useCreateIndex: true,
-          useFindAndModify:false,
-
+    try{
+        await mongoose.connect("mongodb+srv://emenejasher:Alignment19@cluster0.stsym.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
         });
 
         console.log("Database connected")
