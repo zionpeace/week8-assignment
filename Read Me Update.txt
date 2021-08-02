@@ -1,11 +1,11 @@
 <h1 align="center">  Inventory Management App</h1>
 
-## ðŸš©️ &nbsp; Main Features
+Main Features
 
- > This is an Inventory Mgt App was made to track the order state since the customer place it
- > once it's shipped the seller mark it as shipped, and then the shipper mark it as delivered.
+ > This is an Inventory Management App that was created to track available products, products information, admin and clients prefered actions, and modifications.
+ > once it's purchased the seller marks it as sold, and then the admin marks it as bought.
 
-#### Backend Modules Used
+ Backend Modules Used
 
  - Express
  - Nodemon
@@ -13,13 +13,13 @@
  - Json Web Token (For authentication)
  - bcryptjs (for data encryption)
 
-## ðŸ’¡ &nbsp; Key Concepts
+Main Concepts
 
  - CRUD operations
  - Authentication system
  - Encrypting passwords
 
-#### Project methodology
+Interface Outline
 ***************************************************************************************************
 **To Signup and Login**
   - Everyone is registered as a user using "/users/signup"
@@ -33,7 +33,7 @@
   - Delete a product using "/products/<userid>
 ***************************************************************************************************
 
-## ðŸ’» &nbsp; Setup
+Setup/Initialization
 **************************************************
 To run this project, install it locally using npm:
 
@@ -42,14 +42,14 @@ $ npm install (install dependencies)
 $ npm start (for Node server side development)
 **************************************************
 
-## &nbsp; ENV
+DOTENV
  - PORT=
  - DB_URI=
  - JWT_SECRET=
 
-# Author
+Contributors
 
-ðŸ‘¤ &nbsp; 
-  **Ogbeni Fidelis**
-  **Abdulkadir Minur**
-  **Oyibo Delmas**
+  **Ayomiko A.**
+  **Iyke I.**
+  **Peace E.**
+  **Emmanuel J.**
